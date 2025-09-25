@@ -12,6 +12,7 @@ import Config
 config :auction_web,
   generators: [context_app: false]
 
+
 # Configures the endpoint
 config :auction_web, AuctionWeb.Endpoint,
   url: [host: "localhost"],
@@ -64,3 +65,13 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
+
+config :auction, ecto_repos: [Auction.Repo]
+
+# Configures the database
+config :auction, Auction.Repo,
+  database: "auction",
+  username: "postgres",
+  password: "postdba",
+  hostname: "localhost",
+  port: "5434"
