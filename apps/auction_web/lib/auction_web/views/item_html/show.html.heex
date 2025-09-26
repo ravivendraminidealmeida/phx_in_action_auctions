@@ -1,0 +1,16 @@
+<Layouts.flash_group flash={@flash} />
+<div class="py-10 sm:px-6 lg:px-8 xl:px-28 ">
+  <div class="mx-auto max-w-xl lg:mx-0">
+    <p class="text-[2rem] mt-4 font-semibold leading-10 tracking-tighter text-balance">
+      {@item.title}
+    </p>
+    
+    <section class="p-4 size-full text-xl">
+      <ul class="p-2">
+        <li>Description: {@item.description}</li>
+        <li>Ends At: {@item.ends_at}</li>
+      </ul>
+    </section>
+     <.button navigate={~p"/items"}>Go back</.button>
+  </div>
+</div>
